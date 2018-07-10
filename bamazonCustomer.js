@@ -32,7 +32,7 @@ function writeDB (item,howmany){
         console.log("new stok "+newstock);
     });
 
-    connection.query("UPDATE products SET stock_quantity = ? WHERE item_id=?",[howmany,item],
+    connection.query("UPDATE products SET stock_quantity = ? WHERE item_id=?",[newstock,item],
         function(err) {
           if (err) throw err;
           console.log("Congratulations Your Order is on the way ");
